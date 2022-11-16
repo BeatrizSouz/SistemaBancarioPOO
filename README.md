@@ -1,2 +1,2 @@
 # SistemaBancarioPOO
-Sistema simples que simula um bando feito com programação orientada a objetos
+Sistema simples que simula um banco feito com programação orientada a objetos
