@@ -54,18 +54,18 @@ public class pessoaJuridica extends cliente {
 	}
 
 	public void imprimeCliente() {
-		System.out.println("\n-------------------------------------");
-		System.out.println("Número da Conta: "+ getNumeroConta());
-		System.out.println("Agência: "+ getAgencia());
+		System.out.println("-------------------------------------");
+		System.out.println("NÃºmero da Conta: "+ getNumeroConta());
+		System.out.println("AgÃªncia: "+ getAgencia());
 		System.out.println("Telefone: "+ getTelefone());
 		System.out.println("Saldo da Conta: " + getSaldo());
 		System.out.println("Cheque Especial: "+ getChequeEspecial());
 		System.out.println("CNPJ: " + getCnpj());
-		System.out.println("Sócios: ");
+		System.out.println("SÃ³cios: ");
 		System.out.println(getSocios()[0]);
 		System.out.println(getSocios()[1]);
 		System.out.println(getSocios()[2]);
-		System.out.println("Razão Social: "+ getRazaoSocial());
+		System.out.println("RazÃ£o Social: "+ getRazaoSocial());
 		System.out.println("Nome Fantasia: " + getNomeFantasia());
 		System.out.println(" -------------------------------------\n");
 	}
