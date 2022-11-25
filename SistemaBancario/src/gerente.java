@@ -48,7 +48,7 @@ public class gerente {
 			System.out.println("CNPJ: ");
 			cnpj = input.nextLine();
 			System.out.println("Sócios (até 3 membros, na mesma linha, separados por vírgula): ");
-			socios = input.nextLine().split(",");
+			socios = input.nextLine().split(", ");
 			System.out.println("Razão Social: ");
 			razaoSocial = input.nextLine();
 			System.out.println("Nome Fantasia: ");
