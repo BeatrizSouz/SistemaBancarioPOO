@@ -189,5 +189,15 @@ public class gerente {
         }
         return -1;
     }
+
+	public void saldoTotal() {
+		double saldoTotal = 0;
+		for(int i = 0; i < this.cliente.length; i++){
+            if (this.cliente[i] != null){
+            	saldoTotal += this.cliente[i].getSaldo();
+            }
+        }
+		System.out.println("O Saldo total na carteira é de: "+ saldoTotal);
+	}
 	
 }

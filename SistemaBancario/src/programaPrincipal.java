@@ -10,14 +10,15 @@ public class programaPrincipal {
 		
 		do {
 			System.out.println("Digite o número da operação desejada:");
-			System.out.println("Cadastrar novo cliente - 1");
-			System.out.println("Remover cliente de sua carteira - 2");
-			System.out.println("Consultar cliente - 3");
-			System.out.println("Aumentar / Diminuir limite do Cheque Especial - 4");
-			System.out.println("Realizar Transferência entre clientes - 5");
-			System.out.println("Depósito em conta - 6");
-			System.out.println("Gerar Relatório da conta - 7");
-			System.out.println("Finalizar - 0");
+			System.out.println("1 - Cadastrar novo cliente");
+			System.out.println("2 - Remover cliente de sua carteira");
+			System.out.println("3 - Consultar cliente");
+			System.out.println("4 - Aumentar/Diminuir limite do Cheque Especial");
+			System.out.println("5 - Realizar Transferência entre clientes");
+			System.out.println("6 - Depósito em conta");
+			System.out.println("7 - Gerar Relatório de clientes");
+			System.out.println("8 - Total de saldo depositado");
+			System.out.println("0 - Finalizar");
 			opcao = input.nextInt();
 			
 			switch(opcao) {
@@ -48,7 +49,13 @@ public class programaPrincipal {
 				case 7:
 					System.out.println("\nOpção 7 - Relatório de todos os clientes");
 					gerente.imprimirRelatorio();
+					break;
+				case 8:
+					System.out.println("\nOpção 8 - Total de saldo de todos os clientes");
+					gerente.saldoTotal();
+					break;
 				case 0:
+					System.out.println("Programa encerrado");
 					break;
 				default: 
 					System.out.println("FALHA: Digite uma opção válida");
