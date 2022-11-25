@@ -15,12 +15,12 @@ public class gerente {
 		String agencia, telefone;
 		double saldo, chequeEspecial;
 		int indice = retornaIndiceVazio(this.cliente);
-		System.out.println("Cliente Pessoa Física - (1) ou Pessoa Jurídica - (2):");
+		System.out.println("Cliente Pessoa FÃ­sica - (1) ou Pessoa JurÃ­dica - (2):");
 		tipo = input.nextInt();
-		System.out.println("Número da Conta: ");
+		System.out.println("NÃºmero da Conta: ");
 		numeroConta = input.nextInt();
 		input.nextLine();
-		System.out.println("Agência: ");
+		System.out.println("AgÃªncia: ");
 		agencia = input.nextLine();
 		System.out.println("Telefone: ");
 		telefone = input.nextLine();
@@ -47,9 +47,9 @@ public class gerente {
 			String[] socios = new String[2];
 			System.out.println("CNPJ: ");
 			cnpj = input.nextLine();
-			System.out.println("Sócios (até 3 membros, na mesma linha, separados por vírgula): ");
+			System.out.println("SÃ³cios (atÃ© 3 membros, na mesma linha, separados por vÃ­rgula): ");
 			socios = input.nextLine().split(",");
-			System.out.println("Razão Social: ");
+			System.out.println("RazÃ£o Social: ");
 			razaoSocial = input.nextLine();
 			System.out.println("Nome Fantasia: ");
 			nomeFantasia = input.nextLine();
@@ -62,35 +62,35 @@ public class gerente {
 	}
 	
 	public void consultaCliente() {
-		System.out.println("Digite o Número da Conta:");
+		System.out.println("Digite o NÃºmero da Conta:");
 		int numero = input.nextInt();
 		int indice = retornaIndiceNumero(this.cliente, numero);
 		if(indice != -1) {
 			this.cliente[indice].imprimeCliente();
 		}else {
-			System.out.println("FALHA: Cliente não encontrado");
+			System.out.println("FALHA: Cliente nÃ£o encontrado");
 		}
 	}
 	
 	
 	public void removeCliente() {
-		System.out.println("Digite o Número da Conta:");
+		System.out.println("Digite o NÃºmero da Conta:");
 		int numero = input.nextInt();
 		int indice = retornaIndiceNumero(this.cliente, numero);
 		if(indice != -1) {
 			this.cliente[indice] = null;
 			System.out.println("Cliente removido com sucesso");
 		}else {
-			System.out.println("FALHA: Cliente não encontrado");
+			System.out.println("FALHA: Cliente nÃ£o encontrado");
 		}
 	}
 	
 	public void alteraChequeEspecial(){
-		System.out.println("Digite o Número da Conta:");
+		System.out.println("Digite o NÃºmero da Conta:");
 		int numero = input.nextInt();
 		int indice = retornaIndiceNumero(this.cliente, numero);
 		if(indice != -1) {
-			System.out.println("Número da conta:" + this.cliente[indice].getNumeroConta());
+			System.out.println("NÃºmero da conta:" + this.cliente[indice].getNumeroConta());
 			System.out.println("Cheque especial atual:" + this.cliente[indice].getChequeEspecial());
 			System.out.println("Digite o novo limite: ");
 			double novoLimite = input.nextDouble();
@@ -101,17 +101,17 @@ public class gerente {
 			}
 			
 		}else {
-			System.out.println("FALHA: Cliente não encontrado");
+			System.out.println("FALHA: Cliente nÃ£o encontrado");
 		}
 		
 	}
 	
 	
 	public void transerencia() {
-		System.out.println("Digite o Número da Conta de que vai transferir:");
+		System.out.println("Digite o NÃºmero da Conta de que vai transferir:");
 		int numeroT = input.nextInt();
 		int indiceT = retornaIndiceNumero(this.cliente, numeroT);
-		System.out.println("Digite o Número da Conta de que vai receber :");
+		System.out.println("Digite o NÃºmero da Conta de que vai receber :");
 		int numeroR = input.nextInt();
 		int indiceR = retornaIndiceNumero(this.cliente, numeroR);
 		if(indiceT != -1 && indiceR != -1) {
@@ -131,20 +131,20 @@ public class gerente {
 				this.cliente[indiceT].setChequeEspecial(novoChequeEspecial);
 				this.cliente[indiceR].setSaldo(this.cliente[indiceR].getSaldo() + vlrTransf);
 			}else {
-				System.out.println("FALHA: O valor a ser transferido é maior que o saldo em conta");
+				System.out.println("FALHA: O valor a ser transferido Ã© maior que o saldo em conta");
 			}
 			
 		}else {
-			System.out.println("FALHA: Cliente(s) não encontrado(s). Verifique o número das contas");
+			System.out.println("FALHA: Cliente(s) nÃ£o encontrado(s). Verifique o nÃºmero das contas");
 		}
 	}
 	
 	public void adicionarSaldo() {
-		System.out.println("Digite o Número da Conta:");
+		System.out.println("Digite o NÃºmero da Conta:");
 		int numero = input.nextInt();
 		int indice = retornaIndiceNumero(this.cliente, numero);
 		if(indice != -1) {
-			System.out.println("Número da conta:" + this.cliente[indice].getNumeroConta());
+			System.out.println("NÃºmero da conta:" + this.cliente[indice].getNumeroConta());
 			System.out.println("Saldo atual:" + this.cliente[indice].getSaldo());
 			System.out.println("Digite o valor a ser adicionado: ");
 			double saldoAdciolnal = input.nextDouble();
@@ -156,7 +156,7 @@ public class gerente {
 			}
 			
 		}else {
-			System.out.println("FALHA: Cliente não encontrado");
+			System.out.println("FALHA: Cliente nÃ£o encontrado");
 		}
 
 	}
@@ -197,7 +197,8 @@ public class gerente {
             	saldoTotal += this.cliente[i].getSaldo();
             }
         }
-		System.out.println("O Saldo total na carteira é de: "+ saldoTotal);
+		System.out.println("O Saldo total na carteira Ã© de: "+ saldoTotal);
+		System.out.println();
 	}
 	
 }
