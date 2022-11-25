@@ -45,9 +45,9 @@ public class pessoaFisica extends cliente {
 	}
 
 	public void imprimeCliente() {
-		System.out.println("\n-------------------------------------");
-		System.out.println("Número da Conta: "+ getNumeroConta());
-		System.out.println("Agência: "+ getAgencia());
+		System.out.println("-------------------------------------");
+		System.out.println("NÃºmero da Conta: "+ getNumeroConta());
+		System.out.println("AgÃªncia: "+ getAgencia());
 		System.out.println("Telefone: "+ getTelefone());
 		System.out.println("Saldo da Conta: " + getSaldo());
 		System.out.println("Cheque Especial: "+ getChequeEspecial());
